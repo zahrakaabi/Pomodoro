@@ -14,6 +14,10 @@ body {
     background-color: var(--primary-color);
 }
 
+.text-center {
+    text-align: center;
+}
+
 .flex {
     display: flex;
 }

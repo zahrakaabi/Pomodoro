@@ -16,9 +16,8 @@ import './shared/styles/variables.css';
 function App() {
   /* ************** RENDERING ************** */
   return (
-    <div className="App">
+    <div className="App flex items-center justify-center flex-column">
       <PageHeader />
-      helllo
     </div>
   );
 }

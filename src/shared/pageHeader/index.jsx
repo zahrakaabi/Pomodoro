@@ -3,6 +3,9 @@
 /* ----------------------------------------- */
 // Packages
 
+// Constants
+import Menu from '../constants'; 
+
 // Styles
 import './index.css';
 
@@ -12,8 +15,11 @@ import './index.css';
 function PageHeader() {
   /* ************** RENDERING ************** */
   return (
-    <div className="header">
-        header
+    <div className="header text-center">
+        <h1>pomodoro</h1>
+        <div className="menu flex">
+          <Menu />
+        </div>
     </div>
   );
 }
