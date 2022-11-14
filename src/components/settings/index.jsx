@@ -3,25 +3,24 @@
 /* ----------------------------------------- */
 // Packages
 
-// UI Local Components
-import { PageHeader, UrgeWithPleasureComponent, Settings } from './components';
+// Images
+import SETTINGS_ICON from '../../images/settings.png';
 
 // Styles
-import './shared/styles/global.css';
-import './shared/styles/variables.css';
+import './index.css';
 
 /* ----------------------------------------- */
 /*                 POMODORO APP              */
 /* ----------------------------------------- */
-function App() {
+function Settings() {
   /* ************** RENDERING ************** */
   return (
-    <div className="App flex flex-column justify-around items-center">
-      <PageHeader />
-      <UrgeWithPleasureComponent />
-      <Settings />
+    <div className="settings">
+        <div className="setting-icon">
+            <img src={SETTINGS_ICON} alt="setings_icon" />
+        </div>
     </div>
   );
 }
 
-export default App;
+export default Settings;

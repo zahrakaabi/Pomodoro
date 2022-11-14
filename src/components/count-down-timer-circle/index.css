@@ -1,0 +1,31 @@
+.count-down-timer-container {
+    padding: 20px;
+    border-radius: 50%;
+    width: fit-content;
+    height: fit-content;
+    background-color: #141a31;
+    box-shadow: 2px 0px 70px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 0px 70px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 0px 70px -1px rgba(0,0,0,0.75);
+}
+
+path:nth-child(1) {
+    stroke: transparent;
+}
+
+.timer {
+    color: #fff;
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.player {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--primary-text-color);
+    font-size: 1rem;
+    margin: 1rem 0 0 1rem;
+    transition: 0.7s ease;
+    letter-spacing: 0.8rem;
+}

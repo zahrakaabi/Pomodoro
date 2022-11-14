@@ -13,12 +13,16 @@
 .menu button {
     background-color: transparent;
     border: none;
-    color: var(--primary-text-color);
+    color: rgba(255, 255, 255, 0.479);
     padding: 15px 30px;
     border-radius: 25px;
     cursor: pointer; 
     position: relative;   
     z-index: 0;
+}
+
+.menu button:hover {
+    color: var(--primary-text-color);
 }
 
 .menu button::before {
@@ -36,9 +40,10 @@
 
 .menu button:hover::before,
 .active::before {
-    width: 100%;
+    width: 100% !important;
 }
 
 .active {
+    color: var(--primary-color) !important;
     background-color: var(--secondary-color) !important;
 }
