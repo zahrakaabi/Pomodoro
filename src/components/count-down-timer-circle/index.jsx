@@ -2,8 +2,11 @@
 /*                 DEPENDENCIES              */
 /* ----------------------------------------- */
 // Packages
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
+
+// Context
+import { ButtonContext, InputContext } from '../../context/Context';
 
 // Styles
 import './index.css';
@@ -14,6 +17,10 @@ import './index.css';
 function UrgeWithPleasureComponent() {
     // STATES
     const [isPlaying, setIsPlaying] = useState(true);
+
+    // CONTEXT
+    const {selectedMenuButton} = useContext(ButtonContext);
+    const {formInput} = useContext(InputContext);
 
     // CONSTANTS
     const children = ({ remainingTime }) => {
@@ -28,13 +35,14 @@ function UrgeWithPleasureComponent() {
             </div>
         )
     }
-
   /* ************** RENDERING ************** */
   return (
     <div className="count-down-timer-container">
         <CountdownCircleTimer
             size={210}
-            duration={60}
+            duration={(selectedMenuButton === 'pomodoro' ? formInput.pomodoro : 0) ||
+                      (selectedMenuButton === 'short break' ? formInput.shortBreak : 0) || 
+                      (selectedMenuButton === 'long break' ? formInput.longBreak : 0)}
             colors='#f87273'
             strokeWidth={6}
             isPlaying={isPlaying}

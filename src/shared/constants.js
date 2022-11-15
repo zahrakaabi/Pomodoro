@@ -1,11 +1,14 @@
 /* ------------------------------------------ */
-/*                 MENU BUTTONS               */        
+/*                 DEPENDENCIES               */        
 /* ------------------------------------------ */
 // Packages
-import { useState } from 'react';
+import { useContext } from 'react';
+
+// Context
+import { ButtonContext } from '../context/Context'; 
 
 /* ------------------------------------------ */
-/*                 MENU BUTTONS               */        
+/*               MENU BUTTONS TAB             */        
 /* ------------------------------------------ */
 const MENU_BUTTONS = [
     {
@@ -22,17 +25,20 @@ const MENU_BUTTONS = [
     }
 ];
 
+/* ------------------------------------------ */
+/*                    MENU                    */        
+/* ------------------------------------------ */
 function Menu() {
-    const [active, setActive] = useState(0);
+    const {selectedMenuButton, setSelectedMenuButton} = useContext(ButtonContext);
 
     /* ************* RENDERING ************** */
     return (
         MENU_BUTTONS.map((button) => (
             <button 
-              className={button.id === active && 'active'} 
+              className={button.buttonName === selectedMenuButton ? 'active' : ''} 
               key={button.id} 
               type="submit"
-              onClick={() => setActive(button.id)}
+              onClick={() => setSelectedMenuButton(button.buttonName)}
             >
                 {button.buttonName}
             </button>

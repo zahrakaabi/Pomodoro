@@ -3,7 +3,7 @@
 /* ----------------------------------------- */
 // Packages
 
-// Constants
+// UI Local Components
 import Menu from '../constants'; 
 
 // Styles

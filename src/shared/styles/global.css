@@ -1,6 +1,7 @@
 *,
 *::before,
 *::after {
+    margin-top: 0;
     box-sizing: border-box;
 }
 
@@ -30,6 +31,10 @@ body, .App {
 
 .justify-center {
     justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
 }
 
 .justify-around {
