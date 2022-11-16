@@ -4,6 +4,8 @@
     --secondary-color: #f87273;
     --primary-font-color: #fff;
     --secondary-font-color: #000;
+    /*FONTS*/
+    --primary-font: 'Segoe UI', Tahoma, Geneva, Verdana, 'sans-serif';
     /*SHADOWS*/
     /*--primary-shadow: */
 }
@@ -14,4 +16,12 @@
 
 [data-theme="purple"] {
     --secondary-color: #da81fa;
+}
+
+[data-font="Times-New-Roman"] {
+    --primary-font: 'Times New Roman', Times, serif;
+}
+
+[data-font="monospace"] {
+    --primary-font: monospace;
 }

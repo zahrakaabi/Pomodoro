@@ -29,8 +29,12 @@ function App() {
   // CHECK USER THEME -USING LOCAL SORAGE
   const CheckUserTheme = () => {
       const CURRENT_THEME = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+      const CURRENT_FONT = localStorage.getItem('font') ? localStorage.getItem('font') : 'light';
       if (CURRENT_THEME) {
           document.documentElement.setAttribute('data-theme', CURRENT_THEME);
+      }
+      if (CURRENT_FONT) {
+          document.documentElement.setAttribute('data-font', CURRENT_FONT);
       }
   }
   CheckUserTheme();

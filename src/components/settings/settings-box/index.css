@@ -14,7 +14,7 @@
 .title {
     margin-block: 0;
     font-size: 1.8rem;
-    font-family: sans-serif;
+    font-family: var(--primary-font);
 }
 
 hr {
@@ -36,7 +36,7 @@ hr {
 .Time h2,
 h3 {
     font-size: 1rem;
-    font-family: sans-serif;
+    font-family: var(--primary-font);
     opacity: 0.8;
     font-weight: 900;
     letter-spacing: 3px;
@@ -51,7 +51,7 @@ h3 {
 }
 
 label {
-    font-family: sans-serif;
+    font-family: var(--primary-font);
     font-size: 0.7rem;
 }
 
@@ -120,6 +120,18 @@ input[type="number"]::placeholder{
 .font:hover {
     color: #fff;
     background-color: #222;
+}
+
+.font-1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'sans-serif';
+}
+
+.font-2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.font-3 {
+    font-family: monospace;
 }
 
 .color-1 {

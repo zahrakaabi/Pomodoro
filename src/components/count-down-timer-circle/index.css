@@ -22,6 +22,7 @@ path:nth-child(1) {
 .player {
     cursor: pointer;
     border: none;
+    font-family: var(--primary-font);
     background: transparent;
     color: var(--primary-font-color);
     font-size: 1rem;

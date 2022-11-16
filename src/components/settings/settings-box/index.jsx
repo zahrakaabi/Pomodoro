@@ -2,7 +2,7 @@
 /*                 DEPENDENCIES              */
 /* ----------------------------------------- */
 // Packages
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 
 // PropTypes
 import PropTypes from 'prop-types';
@@ -27,6 +27,12 @@ function SettingsBox({ setIsOpen }) {
     const SwitchTheme = (theme) => {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
+    }
+
+    // SWITCH FONTS
+    const SwitchFont = (font) => {
+        document.documentElement.setAttribute('data-font', font);
+        localStorage.setItem('font', font);
     }
 
   /* ************** RENDERING ************** */
@@ -82,9 +88,9 @@ function SettingsBox({ setIsOpen }) {
         <div className="fonts-conainer flex justify-between p-r">
             <h3>FONTS</h3>
             <div className="fonts flex">
-                <div className="font font-1 flex items-center justify-center">Aa</div>
-                <div className="font font-2 flex items-center justify-center">Aa</div>
-                <div className="font font-3 flex items-center justify-center">Aa</div>
+                <div className="font font-1 flex items-center justify-center" onClick={() => SwitchFont('lignt')}>Aa</div>
+                <div className="font font-2 flex items-center justify-center" onClick={() => SwitchFont('Times-New-Roman')}>Aa</div>
+                <div className="font font-3 flex items-center justify-center" onClick={() => SwitchFont('monospace')}>Aa</div>
             </div>
         </div>
         {/* COLORS */}
