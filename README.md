@@ -1,6 +1,8 @@
 ### CUSTOM PRODUCTS AUTO SLIDER
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+<img src="https://user-images.githubusercontent.com/60320144/202141981-3c49ed55-f6cc-43d1-84c9-f968611c456d.PNG" width="400" />
+
 ## Introduction :
 This is a code repositery for the coressponding Frontend Mentor design [design_link](https://www.frontendmentor.io/challenges/pomodoro-app-KBFnycJ6G)
 
