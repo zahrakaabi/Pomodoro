@@ -1,5 +1,5 @@
 .header h1 {
-    color: var(--primary-text-color);
+    color: var(--primary-font-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .menu button:hover {
-    color: var(--primary-text-color);
+    color: var(--primary-font-color);
 }
 
 .menu button::before {

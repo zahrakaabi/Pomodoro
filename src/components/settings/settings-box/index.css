@@ -106,6 +106,7 @@ input[type="number"]::placeholder{
 .font, .color {
     width: 25px;
     height: 25px;
+    border: none;
     cursor: pointer;
     border-radius: 50%;
 } 
@@ -122,7 +123,7 @@ input[type="number"]::placeholder{
 }
 
 .color-1 {
-    background-color: var(--secondary-color);
+    background-color: #f87273;
 }
 
 .color-2 {

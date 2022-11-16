@@ -35,6 +35,7 @@ function UrgeWithPleasureComponent() {
             </div>
         )
     }
+
   /* ************** RENDERING ************** */
   return (
     <div className="count-down-timer-container">
@@ -43,7 +44,7 @@ function UrgeWithPleasureComponent() {
             duration={(selectedMenuButton === 'pomodoro' ? formInput.pomodoro : 0) ||
                       (selectedMenuButton === 'short break' ? formInput.shortBreak : 0) || 
                       (selectedMenuButton === 'long break' ? formInput.longBreak : 0)}
-            colors='#f87273'
+            colors='var(--secondary-color)'
             strokeWidth={6}
             isPlaying={isPlaying}
         >

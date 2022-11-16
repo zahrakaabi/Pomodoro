@@ -2,9 +2,16 @@
     /*COLORS*/
     --primary-color: #1e2240;
     --secondary-color: #f87273;
-    --primary-text-color: #fff;
-    --secondary-text-color: #000;
-
+    --primary-font-color: #fff;
+    --secondary-font-color: #000;
     /*SHADOWS*/
     /*--primary-shadow: */
+}
+
+[data-theme="blue"] {
+    --secondary-color: #70f3f8;
+}
+
+[data-theme="purple"] {
+    --secondary-color: #da81fa;
 }

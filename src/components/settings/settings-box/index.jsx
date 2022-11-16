@@ -23,6 +23,12 @@ function SettingsBox({ setIsOpen }) {
     // Context
     const {formInput, setFormInput} = useContext(InputContext);
 
+    // SWITCH THEMES
+    const SwitchTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }
+
   /* ************** RENDERING ************** */
   return (
     <div className="settings-box">
@@ -85,9 +91,9 @@ function SettingsBox({ setIsOpen }) {
         <div className="coolors-conainer flex justify-between p-r">
             <h3>COLORS</h3>
             <div className="colors flex">
-                <div className="color color-1" />
-                <div className="color color-2" />
-                <div className="color color-3" />
+                <div className="color color-1" onClick={() => SwitchTheme('lignt')} />
+                <div className="color color-2" onClick={() => SwitchTheme('blue')} />
+                <div className="color color-3" onClick={() => SwitchTheme('purple')} />
             </div>
         </div>
     </div>
