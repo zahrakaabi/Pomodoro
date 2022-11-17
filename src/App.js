@@ -2,7 +2,7 @@
 /*                 DEPENDENCIES              */
 /* ----------------------------------------- */
 // Packages
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Context
 import { ButtonContext, InputContext } from './context/Context';
@@ -37,8 +37,9 @@ function App() {
           document.documentElement.setAttribute('data-font', CURRENT_FONT);
       }
   }
-  CheckUserTheme();
 
+  CheckUserTheme();
+  
   /* ************** RENDERING ************** */
   return (
     <div className="App flex flex-column justify-around items-center">

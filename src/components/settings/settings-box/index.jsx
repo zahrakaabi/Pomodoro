@@ -2,13 +2,16 @@
 /*                 DEPENDENCIES              */
 /* ----------------------------------------- */
 // Packages
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 // PropTypes
 import PropTypes from 'prop-types';
 
 // Context
 import { InputContext } from '../../../context/Context';
+
+// CONTEXTS
+import { FONTS_TAB, COLORS_TAB } from './constants';
 
 // Images
 import CLOSE_ICON from '../../../images/close.png';
@@ -20,21 +23,33 @@ import './index.css';
 /*                 POMODORO APP              */
 /* ----------------------------------------- */
 function SettingsBox({ setIsOpen }) {
-    // Context
+    // CONSTANTS
+    const INDEX_FONT = localStorage.getItem('indexFont') ? localStorage.getItem('indexFont') : 0;
+    const INDEX_THEME = localStorage.getItem('indexTheme') ? localStorage.getItem('indexTheme') : 0;
+
+    // STATES
+    const [activeFont, setActiveFont] = useState(INDEX_FONT);
+    const [activeTheme, setActiveTheme] = useState(INDEX_THEME);
+
+    // CONTEXT
     const {formInput, setFormInput} = useContext(InputContext);
 
-    // SWITCH THEMES
-    const SwitchTheme = (theme) => {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-    }
-
     // SWITCH FONTS
-    const SwitchFont = (font) => {
+    const SwitchFont = (font, index) => {
         document.documentElement.setAttribute('data-font', font);
         localStorage.setItem('font', font);
+        localStorage.setItem('indexFont', index);
+        setActiveFont(index);
     }
 
+    // SWITCH THEMES
+    const SwitchTheme = (theme, index) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        localStorage.setItem('indexTheme', index);
+        setActiveTheme(index);
+    }
+    
   /* ************** RENDERING ************** */
   return (
     <div className="settings-box">
@@ -88,18 +103,24 @@ function SettingsBox({ setIsOpen }) {
         <div className="fonts-conainer flex justify-between p-r">
             <h3>FONTS</h3>
             <div className="fonts flex">
-                <div className="font font-1 flex items-center justify-center" onClick={() => SwitchFont('lignt')}>Aa</div>
-                <div className="font font-2 flex items-center justify-center" onClick={() => SwitchFont('Times-New-Roman')}>Aa</div>
-                <div className="font font-3 flex items-center justify-center" onClick={() => SwitchFont('monospace')}>Aa</div>
+                {FONTS_TAB?.map((font) => <div 
+                    key={font.id} 
+                    className={`font font-${font.id} ${font.id === parseInt(INDEX_FONT) ? 'active-font' : ''} flex items-center justify-center`}
+                    onClick={() => SwitchFont(font.font, font.id)}>
+                        Aa
+                    </div>
+                )}
             </div>
         </div>
         {/* COLORS */}
         <div className="coolors-conainer flex justify-between p-r">
             <h3>COLORS</h3>
             <div className="colors flex">
-                <div className="color color-1" onClick={() => SwitchTheme('lignt')} />
-                <div className="color color-2" onClick={() => SwitchTheme('blue')} />
-                <div className="color color-3" onClick={() => SwitchTheme('purple')} />
+                {COLORS_TAB?.map((color) => <div 
+                     className={`color color-${color.id} ${color.id === parseInt(INDEX_THEME) ? 'active-theme' : ''} `} 
+                     key={color.id} 
+                     onClick={() => SwitchTheme(color.color, color.id)} />
+                )}
             </div>
         </div>
     </div>

@@ -109,6 +109,7 @@ input[type="number"]::placeholder{
     border: none;
     cursor: pointer;
     border-radius: 50%;
+    position: relative;
 } 
 
 .font {
@@ -117,31 +118,49 @@ input[type="number"]::placeholder{
     background-color: rgb(209, 209, 209);
 }
 
-.font:hover {
+.font:hover,
+.font:active,
+.font:visited,
+.font:focus,
+.active-font {
     color: #fff;
     background-color: #222;
 }
 
-.font-1 {
+.font-0 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'sans-serif';
 }
 
-.font-2 {
+.font-1 {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.font-3 {
+.font-2 {
     font-family: monospace;
 }
 
-.color-1 {
+.color-0 {
     background-color: #f87273;
 }
 
-.color-2 {
+.color-1 {
     background-color: #70f3f8;
 }
 
-.color-3 {
+.color-2 {
     background-color: #da81fa;
+}
+
+.active-theme {
+    position: relative;
+}
+
+.active-theme::after {
+    content: '✓';
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
