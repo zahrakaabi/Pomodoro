@@ -5,6 +5,9 @@
 import { useState, useContext } from 'react';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 
+// PropType
+import PropTypes from 'prop-types';
+
 // Context
 import { ButtonContext, InputContext } from '../../context/Context';
 
@@ -14,7 +17,7 @@ import './index.css';
 /* ----------------------------------------- */
 /*                 POMODORO APP              */
 /* ----------------------------------------- */
-function UrgeWithPleasureComponent() {
+function UrgeWithPleasureComponent({  duration }) {
     // STATES
     const [isPlaying, setIsPlaying] = useState(true);
 
@@ -41,9 +44,7 @@ function UrgeWithPleasureComponent() {
     <div className="count-down-timer-container">
         <CountdownCircleTimer
             size={210}
-            duration={(selectedMenuButton === 'pomodoro' ? formInput.pomodoro : 0) ||
-                      (selectedMenuButton === 'short break' ? formInput.shortBreak : 0) || 
-                      (selectedMenuButton === 'long break' ? formInput.longBreak : 0)}
+            duration={duration}
             colors='var(--secondary-color)'
             strokeWidth={6}
             isPlaying={isPlaying}
@@ -52,6 +53,10 @@ function UrgeWithPleasureComponent() {
         </CountdownCircleTimer>
     </div>
   );
+}
+
+UrgeWithPleasureComponent.propTypes = {
+  duration: PropTypes.number.isRequired
 }
 
 export default UrgeWithPleasureComponent;

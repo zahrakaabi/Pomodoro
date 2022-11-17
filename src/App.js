@@ -46,7 +46,9 @@ function App() {
       <ButtonContext.Provider value={{ selectedMenuButton, setSelectedMenuButton }}>
         <PageHeader />
         <InputContext.Provider value={{ formInput, setFormInput }}>
-          <UrgeWithPleasureComponent />
+          {selectedMenuButton === 'pomodoro' && <UrgeWithPleasureComponent duration={formInput.pomodoro * 60} />}
+          {selectedMenuButton === 'short break' && <UrgeWithPleasureComponent duration={formInput.shortBreak * 60} />}
+          {selectedMenuButton === 'long break' && <UrgeWithPleasureComponent duration={formInput.longBreak * 60} />}
           <Settings />
         </InputContext.Provider>
       </ButtonContext.Provider>

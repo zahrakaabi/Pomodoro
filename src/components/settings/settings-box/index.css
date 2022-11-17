@@ -164,3 +164,14 @@ input[type="number"]::placeholder{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+@media (max-width: 992px) {
+    .settings-box {
+        width: 90%;
+    }
+
+    label {
+        font-size: 0.5rem;
+    }
+}

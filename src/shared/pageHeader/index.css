@@ -48,3 +48,9 @@
     color: var(--primary-color) !important;
     background-color: var(--secondary-color) !important;
 }
+
+@media (max-width: 992px) {
+    .menu button {
+        padding: 15px;
+    }
+}
