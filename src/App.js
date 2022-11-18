@@ -37,7 +37,6 @@ function App() {
           document.documentElement.setAttribute('data-font', CURRENT_FONT);
       }
   }
-
   CheckUserTheme();
   
   /* ************** RENDERING ************** */

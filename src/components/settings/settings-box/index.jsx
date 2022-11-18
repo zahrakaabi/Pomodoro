@@ -2,7 +2,7 @@
 /*                 DEPENDENCIES              */
 /* ----------------------------------------- */
 // Packages
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 
 // PropTypes
 import PropTypes from 'prop-types';
