@@ -3,6 +3,7 @@
 /* ----------------------------------------- */
 // Packages
 import { useEffect, useState } from 'react';
+import { Notifications } from 'react-push-notification';
 
 // Context
 import { ButtonContext, InputContext } from './context/Context';
