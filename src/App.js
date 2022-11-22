@@ -2,8 +2,7 @@
 /*                 DEPENDENCIES              */
 /* ----------------------------------------- */
 // Packages
-import { useEffect, useState } from 'react';
-import { Notifications } from 'react-push-notification';
+import { useState } from 'react';
 
 // Context
 import { ButtonContext, InputContext } from './context/Context';
@@ -27,6 +26,9 @@ function App() {
     longBreak: ''
   })
 
+  // DESTRUCTURING
+  const { pomodoro, shortBreak, longBreak } = formInput;
+
   // CHECK USER THEME -USING LOCAL SORAGE
   const CheckUserTheme = () => {
       const CURRENT_THEME = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
@@ -46,9 +48,9 @@ function App() {
       <ButtonContext.Provider value={{ selectedMenuButton, setSelectedMenuButton }}>
         <PageHeader />
         <InputContext.Provider value={{ formInput, setFormInput }}>
-          {selectedMenuButton === 'pomodoro' && <UrgeWithPleasureComponent duration={formInput.pomodoro * 60} />}
-          {selectedMenuButton === 'short break' && <UrgeWithPleasureComponent duration={formInput.shortBreak * 60} />}
-          {selectedMenuButton === 'long break' && <UrgeWithPleasureComponent duration={formInput.longBreak * 60} />}
+          {selectedMenuButton === 'pomodoro' && <UrgeWithPleasureComponent duration={pomodoro * 60} />}
+          {selectedMenuButton === 'short break' && <UrgeWithPleasureComponent duration={shortBreak * 60} />}
+          {selectedMenuButton === 'long break' && <UrgeWithPleasureComponent duration={longBreak * 60} />}
           <Settings />
         </InputContext.Provider>
       </ButtonContext.Provider>

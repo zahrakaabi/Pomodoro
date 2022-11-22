@@ -2,7 +2,7 @@
 /*                 DEPENDENCIES              */
 /* ----------------------------------------- */
 // Packages
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import addNotification from 'react-push-notification';
 
