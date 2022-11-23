@@ -13,7 +13,22 @@ This is a code repositery for the coressponding Frontend Mentor design [design_l
 - Customize the appearance of the app with the ability to set preferences for colors and fonts.
 - Save the user preferences in the local storage for a better UX
 
-## How to use this project :
-1- Git clone "its github repo link".
 
-2- run "npm i & npm start" for both client and server side to start the development server  
+**Frontend:** HTML5 / CSS3 / ReactJS 
+
+## Quick start
+
+Clone the repo
+
+```bash
+  git clone https://github.com/blaiti/Developer-Portfolio.git
+```
+
+Run the project
+
+```bash
+  npm i && npm start
+```
+
+for both client and server side to start the development server 
+
