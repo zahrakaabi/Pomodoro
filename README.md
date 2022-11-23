@@ -21,7 +21,7 @@ This is a code repositery for the coressponding Frontend Mentor design [design_l
 Clone the repo
 
 ```bash
-  git clone https://github.com/blaiti/Developer-Portfolio.git
+  git clone https://github.com/zahrakaabi/Pomodoro.git
 ```
 
 Run the project
